@@ -1,5 +1,7 @@
 <h1>{{ title }}</h1>
-<app-loader></app-loader>
+<app-loader *ngIf="loading"></app-loader>
+<app-spinner *ngIf="loading"></app-spinner>
+
 <ul>
   <li *ngFor="let item of itemsToDisplay">
     {{ item }}

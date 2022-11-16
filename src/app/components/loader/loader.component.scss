@@ -25,7 +25,7 @@
 }
 
 @keyframes loaderDotAnimation {
-  100% {
+  100% { //uz 100%- kad animācijas ir beigusies, būs šis apraksts
     transform: scale(1.8);
     border-color: rgba($color-medium-purple, 0.6);
   }

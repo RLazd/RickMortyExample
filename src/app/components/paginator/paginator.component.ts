@@ -7,10 +7,10 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 })
 export class PaginatorComponent implements OnChanges {
   @Input()
-  currentPage = 0;
+  currentPage: number = 0;
 
   @Input()
-  total = 0;
+  total: number = 0;
 
   @Output()
   goToPageEvent = new EventEmitter<number>();

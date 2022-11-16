@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'angular-boilerplate';
+  title = 'Loader & Pagination';
+  loading = true;
   page = 1;
   items = [...Array(180).keys()].map((item) => `Item ${item + 1}`);
   itemsToDisplay: string[] = [];
