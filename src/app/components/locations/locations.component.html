@@ -1,0 +1,24 @@
+<section class="location-section">
+  <h1 class="location-title">Locations of Rick & Morty </h1>
+  <div *ngIf="errorMessage$ | async as errorMessage">
+    {{ errorMessage }}
+  </div>
+  <app-paginator
+    *ngIf="total"
+    [total]="total"
+    [currentPage]="currentPage"
+    (goToPageEvent)="getLocations($event)"></app-paginator>
+  <app-spinner *ngIf="loading$ | async"></app-spinner>
+  <div *ngIf="locations?.length" class="location-container">
+    <div class="location-card" *ngFor="let location of locations">
+      <span class="name">{{ location.name }}</span>
+      <span class="name">{{ location.created }}</span>
+      <span class="name">{{ location.id }}</span>
+    </div>
+  </div>
+  <app-paginator
+    *ngIf="locations?.length && total"
+    [total]="total"
+    [currentPage]="currentPage"
+    (goToPageEvent)="getLocations($event)"></app-paginator>
+</section>
